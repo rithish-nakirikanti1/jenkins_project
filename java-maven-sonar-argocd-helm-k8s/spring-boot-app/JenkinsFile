@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'rithi0/maven-docker-agent:java17'
-      args '-v /var/run/docker.sock:/var/run/docker.sock'
+      args '--user root -v /var/run/docker.sock:/var/run/docker.sock'
     }
   }
 
